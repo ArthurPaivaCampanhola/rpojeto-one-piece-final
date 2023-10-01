@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Kdam+Thmor+Pro&family=Secular+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Kdam+Thmor+Pro&family=Rubik&family=Secular+One&display=swap');
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    overflow: hidden;
+
+}
+
+main::after{
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    min-height: 100vh;
+    width: 80vw;
+
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0)65%) no-repeat;
+}
+
+.personagem{
+    display: none;
+    height: 100vh;
+    
+}
+
+.selecionado{
+    display: block;
+
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul{
+    list-style:none;
+    
+}
+
+.conteudo {
+    position:absolute;
+    top:0;
+    left:120px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color:#fff;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index:1;
+}
+
+.nome-personagem{
+    font-size: 48px;
+    font-family: 'Secular One',sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.descricao{
+    font-family: 'Rubik',sans-serif;
+    font-size:1rem;
+    line-height:24px;
+}
+
+.logo {
+    background-image: url('../imagens/one-piece-logo.png');
+    background-size: cover;
+    height: 100px;
+    width: 200px;
+}
+
+.botoes{
+    position:fixed;
+    top:0;
+    right:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    row-gap:10px;
+    width: 180px;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.3)
+}
+
+.botao {
+    border:none;
+    background: none;
+    cursor:pointer;
+    transition: 0.5s;
+}
+
+.botao:hover {
+   transform: scale(1.1);
+ 
+}
+
+.botao img{
+    border-radius: 50%;
+}
+
+.botoes .selecionado{
+    transform: scale(1.2);
+    transition: 0.5;
+}
+.botoes .selecionado:hover{
+    transform: scale(1.3);
+    
+}
+
+@media(max-width: 769px) {
+    main::after {
+        background: linear-gradient(-0deg, #000 20%, rgba(0, 0, 0, 0)65%) no-repeat;
+        width: 100vw;
+    }
+
+        main .personagem .imagem{
+            height: 85%;
+        }
+
+        .conteudo{
+            justify-content: flex-end;
+            left: 0;
+            top: -20%;
+            max-width: 100vw;
+            padding: 30px;
+        }
+
+        .nome-personagem{
+            font-size: 36px;
+        }
+
+        .descricao{
+            max-width: 500px;
+        }
+
+        .botoes{
+            flex-direction: row;
+            align-items: flex-end;
+            width: 100%;
+            padding: 30px;
+        }
+
+        .botao img{ 
+            max-width: 60px;
+        }
+    }
+
+
+    @media (max-width: 425px){
+        .personagem .imagem{
+            height:auto;
+        }
+
+        .logo{
+            width: 170px;
+            height: 75px;
+        }
+
+        .conteudo{
+            top:-30%;
+        }
+        .nome-personagem{
+            font-size: 24px;
+        }
+
+        .botoes{
+            padding: 20px;
+            top: -20%;
+        }
+        .botao img{
+            max-width: 50px;
+        }
+    }
