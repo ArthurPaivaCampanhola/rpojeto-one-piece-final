@@ -75,7 +75,7 @@ ul{
 }
 
 .logo {
-    background-image: url('./imagens/one-piece-logo.png');
+    background-image: url('./imagens/download-removebg-preview.png');
     background-size: cover;
     height: 100px;
     width: 200px;
@@ -88,10 +88,12 @@ ul{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    row-gap: 0;
     min-height: 100vh;
-    row-gap:10px;
-    width: 180px;
+    width: 195px;
     align-items: center;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
     background-color:rgba(0, 0, 0, 0.3)
 }
 
@@ -100,6 +102,7 @@ ul{
     background: none;
     cursor:pointer;
     transition: 0.5s;
+    transform: scale(0.9);
 }
 
 .botao:hover {
@@ -146,10 +149,40 @@ ul{
     transition:0s;
    }
       
+   #robin{
+    border-radius: 50%;
+   }
 
+   #robin:hover {
+    border:solid rgb(128, 0, 128) 3px;
+    border: 50%;
+    transition:0s;
 
+   }
 
+   #Franky:hover{
+       border: solid royalblue 3px;
+       border-radius: 50%;
+    transition: 0s;
+   }
 
+   #brook:hover{
+    border: solid purple;
+    border-radius: 50%;
+    transition:0s;
+   }
+
+   #usopp:hover{
+    border:green solid 3px;
+    border-radius: 50%;
+    transition: 0s;
+   }
+
+   #jinbei:hover{
+    border: solid cornflowerblue 3px;
+    border-radius: 50%;
+    transition: 0s;
+   }
 @media(max-width: 769px) {
     main::after {
         background: linear-gradient(-0deg, #000 20%, rgba(0, 0, 0, 0)65%) no-repeat;
